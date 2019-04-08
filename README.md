@@ -9,3 +9,8 @@ Output: The original plaintext
 1. Calculated the frequency of characters from the following text: http://www.gutenberg.org/files/11/11-0.txt
 2. Performed the XOR with all the ASCII characters and calculater the score of resulting string based on above calculated frequencies.
 3. Chose the plain text with the biggest score.
+
+#### Usage:
+To run the program:
+1. Clone the repository and go to cloned directory.
+2. Run `go run decipher.go`.
