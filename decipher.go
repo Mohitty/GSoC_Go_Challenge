@@ -6,16 +6,16 @@ import "encoding/hex"
 
 func decodeString(value string, m map[uint8]int) (k byte, plaintext string) {
 	
-	decodedvalue, err := hex.DecodeString(value)
-    if err != nil {
-    	panic(err)
-    }
+    	decodedvalue, err := hex.DecodeString(value)
+    	if err != nil {
+    		panic(err)
+    	}
 
-    resultBytes := make([]byte, len(decodedvalue))
-    score := 0
+    	resultBytes := make([]byte, len(decodedvalue))
+    	score := 0
 
-	key := byte(0)
-    i := byte(0)
+    	key := byte(0)
+    	i := byte(0)
 
 	for ; ;  {
 	    key = byte(i)
@@ -58,7 +58,7 @@ func main() {
 	
 	value := "20342824471508040c1447060903471e081247061502471102151e47040b02110215"
     
-    //decipher the encoded text "value".
+        //decipher the encoded text "value".
 	k, plaintext := decodeString(value, m)
 
 	fmt.Println("key: ", string(k))
